@@ -1,0 +1,8 @@
+SELECT * FROM UserMain
+
+INSERT INTO UserMain(Nombre,Apellido,Rol,Genero) VALUES ('Juan','Suarez','Cajero','M');
+
+
+DELETE FROM UserMain 
+
+DBCC CHECKIDENT (UserMain, RESEED, 0)

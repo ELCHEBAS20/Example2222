@@ -1,0 +1,102 @@
+<div class="row-header">
+  <div class="m-5" id="div_row">
+    <button class="btn btn-secondary w-75" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+      Tabla de datos [Boostrap]
+    </button>
+    <div style="min-height: 120px;">
+      <div class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="card card-body" style="width: 842px;">
+          <div class="m-5">
+            <div class="container ">
+              <div class="mx-auto w-100">
+                <div class="card text-center" style="position: relative;top: -50px;">
+                  <div class="card-header">
+                    <span><strong>Lista datos</strong></span>
+                  </div>
+                  <div class="card-body">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellido</th>
+                          <th scope="col">Rol</th>
+                          <th scope="col">Genero</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of DataInicial;index as index">
+                          <th>{{DataInicial[index].idUsuario}}</th>
+                          <td>{{DataInicial[index].nombre}}</td>
+                          <td>{{DataInicial[index].apellido}}</td>
+                          <td>{{DataInicial[index].rol}}</td>
+                          <td>{{DataInicial[index].genero}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-footer text-muted">
+                    <div class="float-sm-end">
+                      <a><strong>Filas por pagina: {{NRows}}</strong></a>
+                      <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>
+                      <a><strong>{{this.DataInicial[0].idUsuario}}-{{this.DataInicial.at(-1).idUsuario}} de {{countBd}}
+                          datos</strong></a>
+                      <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>
+                      <button class="btn btn-primary btn-sm" [disabled]="isDisabled"
+                        (click)="FunctionGetAnterior()">Anterior</button>
+                      <small>&nbsp;&nbsp;</small>
+                      <button class="btn btn-danger btn-sm" [disabled]="isDisabledSiguiente"
+                        (click)="FunctionGetSiguiente()">Siguiente</button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <small>&nbsp;&nbsp;</small>
+  <div class="m-5" id="div_row">
+    <button class="btn btn-success w-75" type="button" data-bs-toggle="collapse" data-bs-target="#second"
+      aria-expanded="false" aria-controls="collapseWidthExample">
+      Tabla de datos [Angular Material]
+    </button>
+    <div style="min-height: 120px;">
+      <div class="collapse collapse-horizontal" id="second">
+        <div class="card card-body" style="width: 842px;">
+          <div class="m-5">
+            <div class="container ">
+              <div class="mx-auto w-100">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <span><strong>Lista datos</strong></span>
+                  </div>
+                  <div class="card-body">
+                    <p>Aca iria la informacion</p>
+                  </div>
+                  <div class="card-footer text-muted">
+                    <div class="float-sm-end">
+                      <a>Page 1-10</a>
+                      <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>
+                      <button mat-icon-button matTooltip="Anterior">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <button title="Siguiente" mat-icon-button matTooltip="Siguiente"
+                        aria-label="Example icon button with a vertical three dot icon">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

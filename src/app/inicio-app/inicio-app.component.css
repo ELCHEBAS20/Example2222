@@ -1,0 +1,37 @@
+input {
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  bottom: -160px;
+  right: -260px;
+  border: none;
+  outline: none;
+}
+
+#card_bx {
+  border: none;
+  outline: none;
+  width: 500px;
+  height: 400px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.bx-body {
+  position: relative;
+  top: 120px;
+  left: 60px;
+}
+
+.txt_main {
+  position: absolute;
+  top: 20%;
+  left: 210px;
+}
+
+#txt_error {
+  position: absolute;
+  top: 42%;
+  padding: 75px;
+}

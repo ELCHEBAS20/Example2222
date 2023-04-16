@@ -1,0 +1,27 @@
+::root {
+  --bx_shadwon: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.row-header {
+  width: 1215px;
+  position: absolute;
+  left: 20%;
+}
+
+#div_row:last-child {
+  position: relative;
+  top: -200px;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+i {
+  font-size: 15px;
+  margin: 0;
+}
+
+a {
+  font-size: 12px;
+}
